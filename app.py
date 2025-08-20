@@ -363,3 +363,33 @@ if uploaded_file:
 
 else:
     st.caption("Upload a PDF RFP to start the analysis.")
+    
+import streamlit as st
+
+# ... (your existing app code above this line) ...
+
+# This section adds the advantages to the very bottom of the frontend UX.
+st.markdown("---")
+st.markdown(
+    """
+    <div style="background-color:#f0f2f6;padding:20px;border-radius:10px;">
+    <h2 style="color:#263238;">💡 Key Advantages of this Analyzer</h2>
+
+    <h3 style="color:#37474f;">**1. Automates a Tedious Task**</h3>
+    <p>Automatically extracts API requirements from RFPs, saving you valuable time and effort.</p>
+
+    <h3 style="color:#37474f;">**2. Structured & Transparent Analysis**</h3>
+    <p>Uses a multi-agent approach to break down the analysis, providing a clear rationale and confidence score for each finding.</p>
+
+    <h3 style="color:#37474f;">**3. Generates a Head Start**</h3>
+    <p>Creates a preliminary OpenAPI (Swagger) specification based on the RFP, giving you a ready-to-use starting point for API design.</p>
+
+    <h3 style="color:#37474f;">**4. Reduces Misinterpretation**</h3>
+    <p>Translates complex text into a machine-readable format, minimizing the risk of errors and costly re-work.</p>
+
+    <h3 style="color:#37474f;">**5. Engineer-Friendly**</h3>
+    <p>A lightweight, easy-to-use tool that allows API engineers to focus on design challenges rather than manual data extraction.</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
